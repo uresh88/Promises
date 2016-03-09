@@ -8,11 +8,21 @@ page.prototype.pullParagraph = function(url) {
 
 var mainFunction = new function () {
 	var currentPage = new page();
-	var firstPara = currentPage.pullParagraph("https://raw.githubusercontent.com/uresh88/Promises/master/firstPara.json");
-    
+	var firstPara = currentPage.pullParagraph("https://raw.githubusercontent.com/uresh88/Promises/master/paradetail.json");
+
 	firstPara.then(function (res) {
-	    console.log(res);
-	})
+	    var urlArray = res.Para;
+	    urlArray.forEach(function (item) {
+
+	        currentPage.pullParagraph(item)
+	            .then(function (res) {
+	                var para = document.getElementById("para_" + res.paraNum);
+	                parat.innerHTML = res.Para;
+	            });
+	        
+	    })
+        return res;
+    });
 }
 
 
