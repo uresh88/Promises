@@ -204,6 +204,10 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Promise\test.html">
+      <BrowseToURL>~/Views/Index.html</BrowseToURL>
+    </Content>
+    <Content Include="Promise\promises-home.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
