@@ -13,4 +13,4 @@ var mainFunction = new function () {
 }
 
 
-document.addEventListener('DOMContentLoaded', fn, false);
+document.addEventListener('DOMContentLoaded', mainFunction, false);
